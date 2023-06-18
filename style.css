@@ -257,6 +257,7 @@ header .container .content .rigth .cart {
   }
 }
 .products .container .items .cards {
+  transition: 0.5s;
   cursor: pointer;
 }
 .products .container .items .cards img {
@@ -281,7 +282,11 @@ header .container .content .rigth .cart {
   font-weight: 400;
   color: #f16d7f;
 }
+.products .container .items .cards:hover {
+  transform: scale(1.2);
+}
 .products .container button {
+  transition: 0.5s;
   display: block;
   text-align: center;
   cursor: pointer;
@@ -336,6 +341,10 @@ header .container .content .rigth .cart {
   margin-top: 45px;
   margin-bottom: 45px;
 }
+.delivery .container .cont {
+  transition: 1s;
+  cursor: pointer;
+}
 .delivery .container .cont img {
   height: 31px;
   width: 43px;
@@ -351,6 +360,13 @@ header .container .content .rigth .cart {
   font-size: 14px;
   font-weight: 300;
   color: #fbfbfb;
+}
+.delivery .container .cont:hover {
+  background-color: #fff;
+}
+.delivery .container .cont:hover .name,
+.delivery .container .cont:hover .description {
+  color: #000000;
 }
 
 .take {
@@ -455,16 +471,20 @@ footer .container .messager {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
-footer .container .messager .fa-brands {
-  border-left: #222222 3px solid;
-  border-right: #222222 3px solid;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+footer .container .messager .icon {
   background-color: #ffffff;
+  fill: #000000;
   width: 32px;
   height: 32px;
+}
+footer .container .messager :hover path {
+  background-color: rgb(255, 255, 255);
+  fill: #f16d7f;
+}
+footer .container .messager :not(:nth-child(4)) {
+  margin-right: 10px;
 }
 footer .container .copyrigth {
   text-align: center;
