@@ -232,6 +232,8 @@ header {
         grid-gap: 30px;
       }
       .cards {
+        transition: 0.5s;
+
         cursor: pointer;
         img {
           width: 100%;
@@ -256,8 +258,14 @@ header {
           color: #f16d7f;
         }
       }
+      .cards:hover {
+        transform: scale(1.2);
+      }
     }
+
     button {
+      transition: 0.5s;
+
       display: block;
       text-align: center;
       cursor: pointer;
@@ -304,6 +312,8 @@ header {
       margin-bottom: 45px;
     }
     .cont {
+      transition: 1s;
+      cursor: pointer;
       img {
         height: 31px;
         width: 43px;
@@ -319,6 +329,13 @@ header {
         font-size: 14px;
         font-weight: 300;
         color: #fbfbfb;
+      }
+    }
+    .cont:hover {
+      background-color: #fff;
+      .name,
+      .description {
+        color: #000000;
       }
     }
   }
@@ -415,17 +432,20 @@ footer {
       display: flex;
       align-items: center;
       justify-content: center;
-
-      .fa-brands {
-        border-left: #222222 3px solid;
-        border-right: #222222 3px solid;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      cursor: pointer;
+      .icon {
         background-color: #ffffff;
+        fill: #000000;
         width: 32px;
         height: 32px;
+      }
+      :hover path {
+        background-color: rgb(255, 255, 255);
+        fill: #f16d7f;
+      }
+
+      :not(:nth-child(4)) {
+        margin-right: 10px;
       }
     }
 
