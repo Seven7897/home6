@@ -688,6 +688,9 @@ footer {
     padding: 64px 25px;
     box-sizing: border-box;
     text-align: center;
+    @media (min-width: 1600px) {
+      margin-top: -200px;
+    }
     h3 {
       font-size: 14px;
       font-weight: 300;
