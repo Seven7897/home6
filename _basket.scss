@@ -1,0 +1,240 @@
+header {
+  .cart {
+    position: relative;
+    .pcs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 19px;
+      height: 19px;
+      background-color: $colorPink;
+      color: white;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14px;
+      border-radius: 50%;
+      top: -10px;
+      right: 0;
+    }
+  }
+}
+.basket__head {
+  height: 148px;
+  background: rgba(248, 243, 244, 1);
+  .container {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    .name {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 29px;
+      color: rgba(241, 109, 127, 1);
+    }
+  }
+}
+.basket__cards {
+  margin-top: 96px;
+  margin-bottom: 128px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .left {
+      width: 652px;
+      .cards {
+        position: relative;
+        height: 306px;
+        box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
+        display: flex;
+        .image {
+          width: 262px;
+        }
+        .description {
+          width: 262px;
+          margin-top: 22px;
+          margin-left: 31px;
+          .name {
+            margin-bottom: 42px;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 29px;
+            color: rgba(34, 34, 34, 1);
+          }
+          .price {
+            color: rgba(87, 87, 87, 1);
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 26px;
+            margin-bottom: 6px;
+
+            span {
+              color: $colorPink;
+            }
+          }
+          .color {
+            color: rgba(87, 87, 87, 1);
+
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 26px;
+            margin-bottom: 6px;
+          }
+          .size {
+            color: rgba(87, 87, 87, 1);
+
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 26px;
+            margin-bottom: 6px;
+          }
+          .quanity {
+            display: flex;
+            color: rgba(87, 87, 87, 1);
+
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 26px;
+            span {
+              box-sizing: border-box;
+              display: block;
+              text-align: center;
+              width: 44px;
+              height: 25px;
+              border: 1px solid rgba(234, 234, 234, 1);
+              margin-left: 24px;
+              color: rgba(101, 101, 101, 1);
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 22px;
+            }
+          }
+        }
+        .close {
+          position: absolute;
+          top: 28px;
+          right: 22px;
+        }
+      }
+      .cards:nth-child(2) {
+        margin-top: 40px;
+      }
+      .button {
+        cursor: pointer;
+        margin-top: 72px;
+        display: flex;
+        justify-content: space-between;
+        .click {
+          color: rgba(0, 0, 0, 1);
+
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 17px;
+
+          box-sizing: border-box;
+          height: 50px;
+          padding: 17px 40px;
+          border: 1px solid rgba(164, 164, 164, 1);
+        }
+        .click:hover {
+          transition: 0.3s;
+          background-color: $colorPink;
+          color: rgb(255, 255, 255);
+        }
+      }
+    }
+    .rigth {
+      width: 360px;
+      .getMenu {
+        label {
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 19px;
+
+          color: rgba(34, 34, 34, 1);
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          input {
+            border: 1px solid rgba(164, 164, 164, 1);
+            height: 45px;
+            padding-left: 17px;
+          }
+          input::placeholder {
+            color: rgba(34, 34, 34, 1);
+          }
+          input:nth-child(1)::placeholder {
+            color: rgba(177, 177, 177, 1);
+          }
+
+          button {
+            cursor: pointer;
+            border-color: rgba(255, 255, 255, 1);
+            font-size: 11px;
+            font-weight: 300;
+            line-height: 13px;
+            color: rgba(74, 74, 74, 1);
+            display: block;
+            height: 35px;
+            width: 100px;
+            border: 1px solid rgba(164, 164, 164, 1);
+          }
+          button:hover {
+            transition: 0.3s;
+            background-color: $colorPink;
+            color: rgb(255, 255, 255);
+          }
+        }
+      }
+      .total {
+        margin-top: 57px;
+        padding: 40px 34px;
+        .sub {
+          margin-bottom: 12px;
+          text-align: right;
+
+          font-size: 11px;
+          font-weight: 400;
+          line-height: 13px;
+        }
+        .grand {
+          text-align: right;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 19px;
+
+          span {
+            color: $colorPink;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 19px;
+          }
+        }
+        hr {
+          color: rgba(226, 226, 226, 1);
+          margin-top: 21px;
+          margin-bottom: 17px;
+        }
+        button {
+          cursor: pointer;
+          display: block;
+          margin: 0 auto;
+          width: 273px;
+          height: 50px;
+          border: 1px solid rgba(164, 164, 164, 1);
+
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 19px;
+          color: rgb(0, 0, 0);
+          background-color: white;
+        }
+        button:hover {
+          transition: 0.3s;
+          background-color: $colorPink;
+          color: rgb(255, 255, 255);
+        }
+      }
+    }
+  }
+}
