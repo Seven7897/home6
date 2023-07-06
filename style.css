@@ -795,6 +795,116 @@ header .cart .pcs {
   color: rgb(255, 255, 255);
 }
 
+.register {
+  margin-bottom: 96px;
+}
+.register .container {
+  display: flex;
+  gap: 120px;
+}
+.register__left {
+  width: 360px;
+}
+.register__left label {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.register__left label input {
+  border: 1px solid rgb(164, 164, 164);
+  height: 45px;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 16px;
+  color: black;
+}
+.register__left label ::-moz-placeholder {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 16px;
+  color: rgb(164, 164, 164);
+}
+.register__left label ::placeholder {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 16px;
+  color: rgb(164, 164, 164);
+}
+.register__left label p {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 16px;
+  color: rgb(177, 177, 177);
+}
+.register__left label button {
+  cursor: pointer;
+  border: 1px solid rgb(164, 164, 164);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  background-color: rgb(255, 255, 255);
+  color: #ff6a6a;
+  height: 50px;
+  width: 167px;
+}
+.register__left label button path {
+  fill: #ff6a6a;
+}
+.register__left label button:hover {
+  transition: 0.3s;
+  background-color: #ff6a6a;
+  color: white;
+}
+.register__left label button:hover path {
+  fill: white;
+}
+.register__checkBox {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.register__check {
+  display: flex;
+  align-items: center;
+}
+.register__h2 {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: rgb(34, 34, 34);
+}
+.register__h3 {
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 13px;
+  color: rgb(0, 0, 0);
+}
+.register__rigth {
+  display: flex;
+  gap: 22px;
+  flex-direction: column;
+  max-width: 652px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  color: rgb(0, 0, 0);
+}
+.register__rigth .offers .line {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.register__rigth .offers .line h2 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  color: rgb(0, 0, 0);
+}
+
 body,
 html {
   margin: 0;
