@@ -23,9 +23,13 @@ header {
   height: 148px;
   background: rgba(248, 243, 244, 1);
   .container {
+    padding-left: 16px;
     display: flex;
     align-items: center;
     height: inherit;
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
     .name {
       font-size: 24px;
       font-weight: 400;
@@ -38,28 +42,58 @@ header {
   margin-top: 96px;
   margin-bottom: 128px;
   .container {
+    padding: 0 16px;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 1024px) {
+      display: block;
+    }
     .left {
       width: 652px;
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
       .cards {
         position: relative;
         height: 306px;
         box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
         display: flex;
+        @media (max-width: 768px) {
+          height: 188px;
+        }
         .image {
           width: 262px;
+          img {
+            width: inherit;
+            height: inherit;
+          }
+          @media (max-width: 768px) {
+            width: 144px;
+            height: 188px;
+          }
         }
         .description {
           width: 262px;
           margin-top: 22px;
           margin-left: 31px;
+          @media (max-width: 768px) {
+            margin-top: 5px;
+            margin-left: 5px;
+          }
           .name {
             margin-bottom: 42px;
             font-size: 24px;
             font-weight: 400;
             line-height: 29px;
             color: rgba(34, 34, 34, 1);
+            @media (max-width: 768px) {
+              margin-bottom: 24px;
+
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 19px;
+            }
           }
           .price {
             color: rgba(87, 87, 87, 1);
@@ -67,6 +101,11 @@ header {
             font-weight: 400;
             line-height: 26px;
             margin-bottom: 6px;
+            @media (max-width: 768px) {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 17px;
+            }
 
             span {
               color: $colorPink;
@@ -79,6 +118,11 @@ header {
             font-weight: 400;
             line-height: 26px;
             margin-bottom: 6px;
+            @media (max-width: 768px) {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 17px;
+            }
           }
           .size {
             color: rgba(87, 87, 87, 1);
@@ -87,6 +131,11 @@ header {
             font-weight: 400;
             line-height: 26px;
             margin-bottom: 6px;
+            @media (max-width: 768px) {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 17px;
+            }
           }
           .quanity {
             display: flex;
@@ -95,6 +144,12 @@ header {
             font-size: 22px;
             font-weight: 400;
             line-height: 26px;
+            @media (max-width: 768px) {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 17px;
+            }
+
             span {
               box-sizing: border-box;
               display: block;
@@ -107,6 +162,11 @@ header {
               font-size: 18px;
               font-weight: 400;
               line-height: 22px;
+              @media (max-width: 768px) {
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+              }
             }
           }
         }
@@ -114,6 +174,10 @@ header {
           position: absolute;
           top: 28px;
           right: 22px;
+          @media (max-width: 768px) {
+            top: 12px;
+            right: 12px;
+          }
         }
       }
       .cards:nth-child(2) {
@@ -124,17 +188,37 @@ header {
         margin-top: 72px;
         display: flex;
         justify-content: space-between;
+        @media (max-width: 1024px) {
+          width: 508px;
+          margin: 72px auto 0 auto;
+        }
+        @media (max-width: 768px) {
+          width: auto;
+          margin: 72px auto 0 auto;
+        }
         .click {
+          display: flex;
+          align-items: center;
           color: rgba(0, 0, 0, 1);
-
           font-size: 14px;
           font-weight: 300;
           line-height: 17px;
-
           box-sizing: border-box;
           height: 50px;
           padding: 17px 40px;
           border: 1px solid rgba(164, 164, 164, 1);
+          @media (max-width: 768px) {
+            padding: 0 10px;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14px;
+          }
+          @media (max-width: 374px) {
+            padding: 0 10px;
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 12px;
+          }
         }
         .click:hover {
           transition: 0.3s;
@@ -144,7 +228,16 @@ header {
       }
     }
     .rigth {
-      width: 360px;
+      @media (max-width: 1024px) {
+        margin-top: 64px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+        margin-top: 64px;
+        display: block;
+      }
       .getMenu {
         label {
           font-size: 16px;
@@ -219,7 +312,7 @@ header {
           cursor: pointer;
           display: block;
           margin: 0 auto;
-          width: 273px;
+          max-width: 273px;
           height: 50px;
           border: 1px solid rgba(164, 164, 164, 1);
 

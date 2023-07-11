@@ -11,12 +11,25 @@ summary::-webkit-details-marker {
   padding-top: 39px;
   position: relative;
   height: 132px;
+  @media (max-width: 768px) {
+    height: 81px;
+  }
 
   .container {
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
+    // gap: 30px;
     height: inherit;
     padding: 0 16px;
+    @media (max-width: 768px) {
+      gap: 0;
+    }
+    .null {
+      width: 350px;
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
   }
   &__details {
     width: 360px;
@@ -29,6 +42,12 @@ summary::-webkit-details-marker {
     &[open] {
       background: rgba(255, 255, 255, 1);
       box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+    }
+    @media (max-width: 768px) {
+      width: 120px;
+      span {
+        display: none;
+      }
     }
   }
   &__summary {
@@ -83,17 +102,25 @@ summary::-webkit-details-marker {
     padding-top: 10px;
     display: flex;
     gap: 28px;
+    @media (max-width: 768px) {
+      gap: 0;
+    }
     details {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 17px;
-      color: rgba(111, 110, 110, 1);
-
+      height: 14px;
       position: relative;
       summary {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        color: rgba(111, 110, 110, 1);
         display: flex;
         gap: 10px;
         align-items: center;
+        @media (max-width: 768px) {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 14px;
+        }
       }
     }
     .sizeBlock {
@@ -126,11 +153,20 @@ summary::-webkit-details-marker {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
     .cards {
       cursor: pointer;
       max-width: 360px;
       text-align: center;
       margin: 0 auto;
+      @media (max-width: 1024px) {
+        // max-width: none;
+      }
       .img {
         display: flex;
         align-items: center;

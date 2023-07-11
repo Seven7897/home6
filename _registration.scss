@@ -1,16 +1,30 @@
 .register {
   margin-bottom: 96px;
   .container {
+    padding: 16px;
+    box-sizing: border-box;
     display: flex;
     gap: 120px;
+    @media (max-width: 768px) {
+      display: block;
+      margin: 0 auto;
+    }
   }
   &__left {
-    width: 360px;
+    width: 100%;
     label {
       display: flex;
       flex-direction: column;
       gap: 20px;
+      .register__h2 {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
+        margin: 0;
+      }
       input {
+        box-sizing: border-box;
+        padding: 14px;
         border: 1px solid rgba(164, 164, 164, 1);
         height: 45px;
         font-size: 17px;
@@ -88,7 +102,18 @@
     font-weight: 300;
     line-height: 29px;
     color: rgba(0, 0, 0, 1);
+    @media (max-width: 768px) {
+      margin-top: 40px;
+    }
     .h2 {
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 29px;
+      @media (max-width: 1024px) {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
+      }
     }
     .offers {
       .line {
@@ -100,6 +125,11 @@
           font-weight: 300;
           line-height: 29px;
           color: rgba(0, 0, 0, 1);
+          @media (max-width: 1024px) {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 19px;
+          }
         }
       }
     }
